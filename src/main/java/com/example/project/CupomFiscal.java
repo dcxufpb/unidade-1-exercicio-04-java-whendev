@@ -15,9 +15,15 @@ public class CupomFiscal {
 	public static String CNPJ = "42.591.651/0797-34";
 	public static String INSCRICAO_ESTADUAL = "244.898.500.113";
 
-	public static String dadosLoja() {
-		//Implemente aqui
-		return null;
+	public static String dadosLoja() throws RuntimeException {
+		Loja loja = new Loja(NOME_LOJA, LOGRADOURO, NUMERO,
+				COMPLEMENTO, BAIRRO, MUNICIPIO,
+				ESTADO, CEP, TELEFONE, OBSERVACAO,
+				CNPJ, INSCRICAO_ESTADUAL);
+
+		CupomNF cupomFiscal = new CupomNF(loja);
+		cupomFiscal.verify();
+		return cupomFiscal.imprime();
 	}
 
 }
