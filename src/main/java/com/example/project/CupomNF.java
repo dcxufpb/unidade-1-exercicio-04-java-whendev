@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CupomNF {
-    private List<String> erros = new ArrayList<String>();
     private Loja infoLoja;
     private String texto;
 
